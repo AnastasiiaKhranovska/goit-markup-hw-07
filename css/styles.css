@@ -328,8 +328,11 @@ transform: translateX(0);
     flex-direction: column-reverse;
     justify-content: center;
     gap: 40px;
-    margin-top: auto; 
+     
     
+}
+.address-mobile {
+    margin-bottom: auto;
 }
 
 .contact-mobile-phone {
