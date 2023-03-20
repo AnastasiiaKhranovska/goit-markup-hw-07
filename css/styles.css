@@ -238,15 +238,15 @@ cursor: pointer;
     right: 0;
     width: 100%;
     height: 100%;
-    max-width: 428px;
+    /* max-width: 428px; */
     padding: 80px 35px 40px 40px;
     background-color: var(--color-inverted);
     z-index: 2;
 
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    overflow-y: hidden;
-    overflow-x: hidden;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
 }
 .mobile-menu.is-open {
 transform: translateX(0);
@@ -287,13 +287,13 @@ transform: translateX(0);
 .modal-mobile {
     width: 100%;
     height: 100%;
-    max-width: 428px;
-    max-height: 796px;
-    margin-left: auto;
-    margin-right: auto;
+    /* max-width: 428px;
+    max-height: 796px; */
+    /* margin-left: auto;
+    margin-right: auto; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .header-link-mobile {
@@ -313,7 +313,7 @@ transform: translateX(0);
     flex-direction: column-reverse;
     justify-content: center;
     gap: 40px;
-    margin-top: 200px;
+    margin-top: auto; 
     
 }
 
@@ -350,11 +350,12 @@ transform: translateX(0);
 }
 .social-list-mobile {
     display: flex;
+    flex-wrap: wrap;
     gap: 56px;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 48px;
-    margin-left: 60px;
-    margin-right: 40px;
+    /* margin-left: 60px;
+    margin-right: 40px; */
 }
 
 .button-white {
@@ -509,12 +510,13 @@ transform: translateX(0);
         text-align: center;
         margin-right: auto;
         margin-left: auto;
-        
+        margin-bottom: 96px;
         
     }
     .section-text .titel-text:not(:last-child) {
         margin-bottom: 72px;
     }
+
     }
  @media screen and (max-width: 1199px) {
         .section-text .vector {
@@ -530,6 +532,7 @@ transform: translateX(0);
             display: flex;
             flex-wrap: wrap;
             gap: 72px 24px;
+            margin-bottom: 96px; 
         }
          .section-text .titel-text{
             flex-basis: calc((100% - 24px) / 2);
@@ -542,6 +545,7 @@ transform: translateX(0);
                 flex-wrap: wrap;
                 gap: 24px;
                 flex-basis: calc((100% - 72px) / 4);
+                margin-bottom: 0;
             }
              .section-text .vector {
                 display: flex;
@@ -607,8 +611,12 @@ transform: translateX(0);
     }
 }    */
 
-
-
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px;
+    justify-content: center;
+}
 
   @media screen and (max-width: 767px) {
     .section {
@@ -624,6 +632,7 @@ transform: translateX(0);
     .gallery {
         margin-left: auto;
         margin-right: auto;
+        
     }
     .section-team .gallery:not(:last-child) {
         margin-bottom: 72px;
@@ -815,19 +824,22 @@ transform: translateX(0);
 .team {
     background: var(--color-white);
 }
-.section-doing {
+.doing {
     display: none;
 
     
 }
 @media screen and (min-width: 768px) {
-    .section-doing {
+   .doing {
         display: none;
     
         
     }
 }
 @media screen and (min-width: 1200px) {
+    .doing {
+        display: flex;
+    }
     .section-doing {
         display: flex;
     gap: 24px;
@@ -941,6 +953,7 @@ transform: translateX(0);
     font-weight: 500;
     margin-bottom: 16px;
     text-align: center;
+
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
     .footer-form-input {
@@ -972,8 +985,13 @@ transform: translateX(0);
     .footer-text {
         padding-bottom: 72px;
     }
-    
-   
+    .footer-margin-second {
+        margin-bottom: 72px;
+    }
+   .footer-send {
+    margin-left: auto;
+    margin-right: auto;
+   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px){
     .container-footer {
@@ -984,19 +1002,25 @@ transform: translateX(0);
 }
 .need-footer {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     gap: 24px;
+    margin-bottom: 72px;
 }
 .footer-contact {
     display: flex;
     gap: 24px;
 }
-
+.footer-social-title {
+    text-align: left;
+}
 /* Зависла с нащадками, не знаю как обратиться к этому футер-сенд */
 .footer-form-input {
     width: 264px;
     height: 40px; 
+}
+.title {
+    text-align: left;
 }
 }
 .footer-contact .footer-send {
@@ -1067,6 +1091,7 @@ transform: translateX(0);
        flex-direction: row;
        gap: 24px;
     }
+   
 }
 
 
@@ -1158,7 +1183,7 @@ transform: translateX(0);
     display: flex;
     justify-content: center;
     gap: 16px;
-    padding-bottom: 72px;
+    /* padding-bottom: 72px; */
 } 
 .footer-social-item {
     width: 40px;
@@ -1176,19 +1201,22 @@ transform: translateX(0);
     fill: var(--color-inverted);
 }
 .footer-send {
+    width: 165px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px; 
     padding: 8px 24px;
+    
     background-color: var(--color-brand);
     color: var(--color-inverted);
     border-radius: 4px;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 .footer-send:hover,
 .footer-send:focus {
@@ -1260,15 +1288,18 @@ margin-bottom: 16px;
     pointer-events: none;
 }
 .modal {
-    position: relative;
-    overflow: auto;
-    width: 100%;
-        height: 100%;
-    max-width: 408px;
-    max-height: 584px;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+     /* overflow: auto;  */
+      /* width: 100%;   */
+        /* height: 100%; */
+    min-width: 408px;
+    min-height: 586px; 
     background-color: var(--color-modal);
     border-radius: 4px;
     padding: 72px 24px 24px;
+    
 }
 .modal-close {
     position: absolute;
@@ -1317,6 +1348,7 @@ margin-bottom: 16px;
    flex-direction: column;
    gap: 4px;
    margin-bottom: 8px;
+   
 }
 .form-label {
     color: var(--color-icon);
@@ -1331,6 +1363,7 @@ margin-bottom: 16px;
     padding: 14px 19px;
     width: 360px; 
     height: 40px;
+    outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-left: 38px;
 
